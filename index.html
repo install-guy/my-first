@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobby Etc Vehicle Finder Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Prototype</p>
+      <h1>Find Parts for Your Ride</h1>
+      <p class="subhead">
+        A cleaner vehicle-based finder to replace the clunky filter stack.
+      </p>
+    </header>
 
+    <section class="finder-card">
+      <div class="finder-header">
+        <h2>Vehicle Finder</h2>
+        <button id="resetBtn" class="secondary-btn" type="button">Reset</button>
+      </div>
+
+      <div class="finder-grid">
+        <div class="field">
+          <label for="makeSelect">Make</label>
+          <select id="makeSelect">
+            <option value="">Choose Make</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="modelSelect">Model</label>
+          <select id="modelSelect" disabled>
+            <option value="">Choose Model</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="yearSelect">Year</label>
+          <select id="yearSelect" disabled>
+            <option value="">Choose Year</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="selection-summary" id="selectionSummary">
+        No vehicle selected yet.
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-header">
+        <div>
+          <h2>Vehicle Kits / Compatible Products</h2>
+          <p id="resultsCount">Showing all products</p>
+        </div>
+
+        <details class="fallback-filters">
+          <summary>More filters (fallback)</summary>
+          <div class="fallback-content">
+            <p>This is where the legacy filter stack would remain available.</p>
+            <p>
+              In the real site, this new finder would sit above the existing filters
+              instead of replacing them on day one.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="finder.js"></script>
+</body>
+</html>
