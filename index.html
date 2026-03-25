@@ -9,18 +9,27 @@
 <body>
   <main class="page">
     <header class="hero">
-      <p class="eyebrow">Prototype</p>
-      <h1>Find Parts for Your Ride</h1>
+      <p class="eyebrow">RC Parts Finder Prototype</p>
+      <h1>Select Your Ride. Find the Right Parts Fast.</h1>
       <p class="subhead">
-        A cleaner vehicle-based finder to replace the clunky filter stack.
+        A cleaner make → model → year flow designed to feel instant, modern, and obvious.
       </p>
     </header>
 
-    <section class="finder-card">
+    <section class="finder-card" aria-labelledby="finderTitle">
       <div class="finder-header">
-        <h2>Vehicle Finder</h2>
+        <div>
+          <h2 id="finderTitle">Vehicle Finder</h2>
+          <p class="finder-helper">Step through each dropdown to narrow to an exact fit.</p>
+        </div>
         <button id="resetBtn" class="secondary-btn" type="button">Reset</button>
       </div>
+
+      <ol class="step-row" aria-hidden="true">
+        <li class="step-chip is-active" id="stepMake">1. Make</li>
+        <li class="step-chip" id="stepModel">2. Model</li>
+        <li class="step-chip" id="stepYear">3. Year</li>
+      </ol>
 
       <div class="finder-grid">
         <div class="field">
@@ -45,29 +54,39 @@
         </div>
       </div>
 
-      <div class="selection-summary" id="selectionSummary">
+      <div class="selection-summary" id="selectionSummary" aria-live="polite">
         No vehicle selected yet.
       </div>
     </section>
 
-    <section class="results-section">
+    <section class="results-section" aria-labelledby="resultsTitle">
       <div class="results-header">
         <div>
-          <h2>Vehicle Kits / Compatible Products</h2>
+          <h2 id="resultsTitle">Compatible Products</h2>
           <p id="resultsCount">Showing all products</p>
         </div>
 
-        <details class="fallback-filters">
-          <summary>More filters (fallback)</summary>
-          <div class="fallback-content">
-            <p>This is where the legacy filter stack would remain available.</p>
-            <p>
-              In the real site, this new finder would sit above the existing filters
-              instead of replacing them on day one.
-            </p>
-          </div>
-        </details>
+        <div class="results-controls">
+          <label for="sortSelect" class="sort-label">Sort</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="priceLow">Price: Low to High</option>
+            <option value="priceHigh">Price: High to Low</option>
+            <option value="title">Name: A-Z</option>
+          </select>
+        </div>
       </div>
+
+      <details class="fallback-filters">
+        <summary>More filters (legacy fallback)</summary>
+        <div class="fallback-content">
+          <p>This remains available while the new finder rolls out.</p>
+          <p>
+            In production, finder selections should pre-apply backend filters and still allow
+            deeper refinement for power users.
+          </p>
+        </div>
+      </details>
 
       <div id="productGrid" class="product-grid"></div>
     </section>

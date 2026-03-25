@@ -32,7 +32,9 @@ const products = [
     model: "Slash 4x4",
     year: "2024",
     price: "$89.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Suspension",
+    sku: "TRX-SLS-2241"
   },
   {
     id: 2,
@@ -41,7 +43,9 @@ const products = [
     model: "Slash 4x4",
     year: "2023",
     price: "$42.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Steering",
+    sku: "TRX-STG-1198"
   },
   {
     id: 3,
@@ -50,7 +54,9 @@ const products = [
     model: "X-Maxx",
     year: "2022",
     price: "$149.99",
-    stock: "Low Stock"
+    stock: "Low Stock",
+    category: "Bundle",
+    sku: "TRX-XMX-7742"
   },
   {
     id: 4,
@@ -59,7 +65,9 @@ const products = [
     model: "Kraton 6S",
     year: "2024",
     price: "$119.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Suspension",
+    sku: "ARM-K6S-3014"
   },
   {
     id: 5,
@@ -68,7 +76,9 @@ const products = [
     model: "Typhon 3S",
     year: "2023",
     price: "$74.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Handling",
+    sku: "ARM-T3S-2217"
   },
   {
     id: 6,
@@ -77,7 +87,9 @@ const products = [
     model: "SCX10 III",
     year: "2022",
     price: "$64.99",
-    stock: "Backorder"
+    stock: "Backorder",
+    category: "Bundle",
+    sku: "AXL-SCX-8420"
   },
   {
     id: 7,
@@ -86,7 +98,9 @@ const products = [
     model: "SCX24",
     year: "2024",
     price: "$39.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Drivetrain",
+    sku: "AXL-M24-9011"
   },
   {
     id: 8,
@@ -95,7 +109,9 @@ const products = [
     model: "Rustler 4x4",
     year: "2024",
     price: "$58.99",
-    stock: "In Stock"
+    stock: "In Stock",
+    category: "Handling",
+    sku: "TRX-RUS-4166"
   },
   {
     id: 9,
@@ -104,6 +120,8 @@ const products = [
     model: "Mojave 4S",
     year: "2024",
     price: "$129.99",
-    stock: "Low Stock"
+    stock: "Low Stock",
+    category: "Power",
+    sku: "ARM-M4S-5108"
   }
 ];
